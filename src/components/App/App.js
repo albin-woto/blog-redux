@@ -1,35 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './App.css';
 
-const App = () => {
-  const completeRow = () => [
-    <tr>
-      <td>Ayrton</td>
-      <td>ayrton@senna.com</td>
-      <td>ayrton.com</td>
-    </tr>,
-    <tr>
-      <td>Kimi</td>
-      <td>kimi@f1.com</td>
-      <td>kimi.com</td>
-    </tr>,
-  ];
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      users: [
+        {
+          name: 'Ayrton',
+          email: 'ayrton@senna.com',
+          link: 'ayrton.com',
+        },
+        {
+          name: 'Kimi',
+          email: 'kimi@f1.com',
+          link: 'kimi.com',
+        },
+      ],
+    };
+  }
 
-  return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Correo</th>
-          <th>Enlace</th>
-        </tr>
-      </thead>
-      <tbody>
-        { completeRow() }
-      </tbody>
-    </table>
-  );
-};
+  completeRows = () =>
+    this.state.users.map((user) => (
+      <tr>
+        <td>{user.name}</td>
+        <td>{user.email}</td>
+        <td>{user.link}</td>
+      </tr>
+    ));
+
+  render() {
+    return (
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>{ this.completeRows() }</tbody>
+      </table>
+    );
+  }
+}
 
 export default App;
