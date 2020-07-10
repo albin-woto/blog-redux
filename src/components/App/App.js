@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './App.css';
 
@@ -6,6 +7,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      users: [],
+    };
+  }
+  
+  async componentDidMount() {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    console.log('response:', response);
+    this.setState({
       users: [
         {
           name: 'Ayrton',
@@ -18,7 +27,7 @@ class App extends Component {
           link: 'kimi.com',
         },
       ],
-    };
+    });
   }
 
   completeRows = () =>
@@ -31,6 +40,7 @@ class App extends Component {
     ));
 
   render() {
+    console.log(this.state.users);
     return (
       <table className="table">
         <thead>
@@ -40,7 +50,7 @@ class App extends Component {
             <th>Link</th>
           </tr>
         </thead>
-        <tbody>{ this.completeRows() }</tbody>
+        <tbody>{this.completeRows()}</tbody>
       </table>
     );
   }
