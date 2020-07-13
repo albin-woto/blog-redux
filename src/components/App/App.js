@@ -1,48 +1,16 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import Menu from '../Menu/Menu';
+import Users from '../../pages/Users/Users';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      users: [],
-    };
-  }
-
-  async componentDidMount() {
-    const response = await axios.get(
-      'https://jsonplaceholder.typicode.com/users'
-    );
-    this.setState({
-      users: response.data,
-    });
-  }
-
-  completeRows = () =>
-    this.state.users.map((user) => (
-      <tr key={user.id}>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.website}</td>
-      </tr>
-    ));
-
-  render() {
-    return (
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>{this.completeRows()}</tbody>
-      </table>
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <Menu />
+    <Switch>
+      <Route exact path="/users" component={Users} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;
