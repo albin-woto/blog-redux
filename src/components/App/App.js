@@ -10,37 +10,26 @@ class App extends Component {
       users: [],
     };
   }
-  
+
   async componentDidMount() {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-    console.log('response:', response);
+    const response = await axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    );
     this.setState({
-      users: [
-        {
-          name: 'Ayrton',
-          email: 'ayrton@senna.com',
-          link: 'ayrton.com',
-        },
-        {
-          name: 'Kimi',
-          email: 'kimi@f1.com',
-          link: 'kimi.com',
-        },
-      ],
+      users: response.data,
     });
   }
 
   completeRows = () =>
     this.state.users.map((user) => (
-      <tr>
+      <tr key={user.id}>
         <td>{user.name}</td>
         <td>{user.email}</td>
-        <td>{user.link}</td>
+        <td>{user.website}</td>
       </tr>
     ));
 
   render() {
-    console.log(this.state.users);
     return (
       <table className="table">
         <thead>
