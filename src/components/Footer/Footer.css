@@ -1,15 +1,11 @@
-.menu {
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
   background-color: #27496d;
+  color: white;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-}
-.menu-link {
-  color: white;
-  text-decoration: none;
-}
-
-.menu-link:hover {
-  color: #dae1e7;
 }
