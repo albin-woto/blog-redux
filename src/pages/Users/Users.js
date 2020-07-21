@@ -21,6 +21,9 @@ class Users extends Component {
     ));
 
   render() {
+    // Check if it's loading or has any errors
+    console.log('loading', this.props.loading);
+    console.log('error?:', this.props.error);
     return (
       <table className="table">
         <thead>
