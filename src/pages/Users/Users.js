@@ -2,28 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as userActions from '../../actions/userActions';
+import Loader from '../../components/Loader/Loader';
 
 import './Users.css';
 
 class Users extends Component {
-
   componentDidMount() {
     this.props.getAllUsers();
   }
 
-  completeRows = () =>
-    this.props.users.map((user) => (
-      <tr key={user.id}>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.website}</td>
-      </tr>
-    ));
-
-  render() {
-    // Check if it's loading or has any errors
-    console.log('loading', this.props.loading);
-    console.log('error?:', this.props.error);
+  getContent = () => {
     return (
       <table className="table">
         <thead>
@@ -36,6 +24,19 @@ class Users extends Component {
         <tbody>{this.completeRows()}</tbody>
       </table>
     );
+  };
+
+  completeRows = () =>
+    this.props.users.map((user) => (
+      <tr key={user.id}>
+        <td>{user.name}</td>
+        <td>{user.email}</td>
+        <td>{user.website}</td>
+      </tr>
+    ));
+
+  render() {
+    return this.props.loading ? <Loader /> : this.getContent();
   }
 }
 
