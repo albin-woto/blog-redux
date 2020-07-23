@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import * as userActions from '../../actions/userActions';
 import Loader from '../../components/Loader/Loader';
+import Error from '../../components/Error/Error';
 
 import './Users.css';
 
@@ -12,6 +13,14 @@ class Users extends Component {
   }
 
   getContent = () => {
+    if (this.props.loading) {
+      return <Loader />;
+    }
+
+    if (this.props.error) {
+      return <Error message={this.props.error}/>;
+    }
+    
     return (
       <table className="table">
         <thead>
@@ -36,13 +45,17 @@ class Users extends Component {
     ));
 
   render() {
-    return this.props.loading ? <Loader /> : this.getContent();
+    return (
+      <>
+        {this.getContent()}
+      </>
+    );
   }
 }
 
 // mapState recieves the state from store and props of the component itself
 const mapStateToProps = (reducers) => {
   return reducers.userReducer;
-}
+};
 
 export default connect(mapStateToProps, userActions)(Users);

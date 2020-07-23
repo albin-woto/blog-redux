@@ -4,6 +4,6 @@
   margin: 2rem;
 }
 
-.table td {
-  padding: 5px 0;
+.table td, th {
+  padding: 0.5rem 0.5rem;
 }
