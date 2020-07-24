@@ -1,5 +1,5 @@
 .layout-container {
   height: 100vh;
   display: grid;
-  grid-template-rows: 3rem auto 3rem;
+  grid-template-rows: 3rem 5rem auto 3rem;
 }

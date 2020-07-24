@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import * as userActions from '../../actions/userActions';
+
 import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error/Error';
+import UserTable from '../../components/UserTable/UserTable';
 
 import './Users.css';
 
@@ -18,35 +19,16 @@ class Users extends Component {
     }
 
     if (this.props.error) {
-      return <Error message={this.props.error}/>;
+      return <Error message={this.props.error} />;
     }
-    
-    return (
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>{this.completeRows()}</tbody>
-      </table>
-    );
-  };
 
-  completeRows = () =>
-    this.props.users.map((user) => (
-      <tr key={user.id}>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.website}</td>
-      </tr>
-    ));
+    return <UserTable users={this.props.users} />;
+  };
 
   render() {
     return (
       <>
+        <h1>Users</h1>
         {this.getContent()}
       </>
     );
