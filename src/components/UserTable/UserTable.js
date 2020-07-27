@@ -1,16 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as userActions from '../../actions/userActions';
 
 import './UserTable.css';
 
 const UserTable = (props) => {
   const completeRows = () =>
-    props.users.map((user) => (
+    props.users.map((user, key) => (
       <tr key={user.id}>
         <td>{user.name}</td>
         <td>{user.email}</td>
         <td>{user.website}</td>
+        <td>
+          <Link to={`/publications/${key}`}>
+            <div className="eye icon"></div>
+          </Link>
+        </td>
       </tr>
     ));
 
