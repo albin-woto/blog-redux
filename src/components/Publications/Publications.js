@@ -3,29 +3,55 @@ import { connect } from 'react-redux';
 import * as userActions from '../../actions/userActions';
 import * as publicationActions from '../../actions/publicationActions';
 
+import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
+
 class Publications extends Component {
   // To assure that the users are available before the call of getPublicationsByUser
   // I made the componentDidMount async and await for getAllUsers
   async componentDidMount() {
     console.log('props mount', this.props);
+    // Destructuring for better and cleaner code
+    // The last one is the destructuring of this.props.match.params.key
+    const {
+      getAllUsers,
+      getPublicationByUser,
+      match: {
+        params: { key },
+      },
+    } = this.props;
+
     if (!this.props.userReducer.users.length) {
-      await this.props.getAllUsers();
+      await getAllUsers();
     }
-    this.props.getPublicationByUser(
-      this.props.userReducer.users[this.props.match.params.key].id
-    );
+    if (!('publications_index' in this.props.userReducer.users[key]))
+      getPublicationByUser(this.props.userReducer.users[key].id);
   }
+
+  showUser = () => {
+    const {
+      userReducer,
+      match: {
+        params: { key },
+      },
+    } = this.props;
+
+    if (userReducer.error) {
+      return <Error message={userReducer.error} />;
+    }
+    if (!userReducer.users.length || userReducer.loading) {
+      return <Loader />;
+    }
+
+    return <h1>Publications of {userReducer.users[key].name}</h1>;
+  };
 
   render() {
     console.log('props', this.props);
     return (
-      <div>
-        <h1>
-          Publications of{' '}
-          {this.props.userReducer.users[this.props.match.params.key].name}
-        </h1>
-        {this.props.match.params.key}
-      </div>
+      <>
+        { this.showUser() }
+      </>
     );
   }
 }
