@@ -11,14 +11,19 @@ class Publications extends Component {
     if (!this.props.userReducer.users.length) {
       await this.props.getAllUsers();
     }
-    this.props.getPublicationByUser(this.props.match.params.key);
+    this.props.getPublicationByUser(
+      this.props.userReducer.users[this.props.match.params.key].id
+    );
   }
 
   render() {
     console.log('props', this.props);
     return (
       <div>
-        {/* <h1>Publications of {this.props.users.name}</h1> */}
+        <h1>
+          Publications of{' '}
+          {this.props.userReducer.users[this.props.match.params.key].name}
+        </h1>
         {this.props.match.params.key}
       </div>
     );
