@@ -10,7 +10,9 @@ import './Users.css';
 
 class Users extends Component {
   componentDidMount() {
-    this.props.getAllUsers();
+    if(!this.props.users.length){
+      this.props.getAllUsers();
+    }
   }
 
   getContent = () => {
