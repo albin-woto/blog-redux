@@ -22,3 +22,12 @@ export const getAllPublications = () => async (dispatch) => {
     });
   }
 };
+
+export const getByUser = () => async (dispatch) => {
+  const response = await axios.get('https://jsonplaceholder.typicode.com/posts?userId=1');
+  dispatch({
+    type: GET_ALL,
+    payload: response.data,
+  });
+  console.log('publication user 1 response', response)
+}
