@@ -4,12 +4,14 @@ import * as userActions from '../../actions/userActions';
 import * as publicationActions from '../../actions/publicationActions';
 
 class Publications extends Component {
-  componentDidMount() {
+  // To assure that the users are available before the call of getPublicationsByUser
+  // I made the componentDidMount async and await for getAllUsers
+  async componentDidMount() {
     console.log('props mount', this.props);
-    this.props.getAllPublications();
     if (!this.props.userReducer.users.length) {
-      this.props.getAllUsers();
+      await this.props.getAllUsers();
     }
+    this.props.getPublicationByUser(this.props.match.params.key);
   }
 
   render() {
