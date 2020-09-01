@@ -39,7 +39,7 @@ export const getPublicationByUser = (id) => async (dispatch, getState) => {
     console.error(error.message);
     dispatch({
       type: ERROR,
-      payload: error.message,
+      payload: "The posts aren't available right now.",
     });
   }
 };

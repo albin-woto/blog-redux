@@ -75,7 +75,10 @@ class Publications extends Component {
     return (
       <section>
         {publications[publications_index].map((publication) => (
-          <article className="publication">
+          <article 
+            className="publication"
+            key={ publication.id }
+            >
             <h3 className="publication-title">
               {'Title: ' + publication.title}
             </h3>
