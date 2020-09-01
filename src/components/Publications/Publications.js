@@ -48,7 +48,7 @@ class Publications extends Component {
     return <h1>Publications of {userReducer.users[key].name}</h1>;
   };
 
-  showPublications = () => {
+  validatePublications = () => {
     const {
       userReducer,
       userReducer: { users },
@@ -72,13 +72,18 @@ class Publications extends Component {
     if (!('publications_index' in users[key])) return;
 
     const { publications_index } = users[key];
+
+    return this.displayPublications(
+      publications[publications_index],
+      publications_index
+    );
+  };
+
+  displayPublications = (publications, publications_index) => {
     return (
       <section>
-        {publications[publications_index].map((publication) => (
-          <article 
-            className="publication"
-            key={ publication.id }
-            >
+        {publications.map((publication) => (
+          <article className="publication" key={publication.id}>
             <h3 className="publication-title">
               {'Title: ' + publication.title}
             </h3>
@@ -94,7 +99,7 @@ class Publications extends Component {
     return (
       <>
         {this.showUser()}
-        {this.showPublications()}
+        {this.validatePublications()}
       </>
     );
   }

@@ -14,7 +14,13 @@ export const getPublicationByUser = (id) => async (dispatch, getState) => {
       `https://jsonplaceholder.typicode.com/posts?userId=${id}`
     );
 
-    const updated_publications = [...publications, response.data];
+    const new_publications = response.data.map(publication => ({
+      ...publication,
+      comments: [],
+      open: false
+    }))
+
+    const updated_publications = [...publications, new_publications];
 
     dispatch({
       type: GET_BY_USER,
