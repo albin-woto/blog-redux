@@ -1,12 +1,14 @@
+section {
+  margin-top: 1.5rem;
+}
 .publication {
   margin: 2rem 2rem 0 calc(2rem + 8px);
   padding-bottom: 2rem;
   border-bottom: 1px solid rgb(128, 128, 128, 0.4);
-  box-sizing: border-box;
 }
 .publication-title {
   font-family: 'Helvetica Neue';
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #00909e;
   margin: 0;
 }

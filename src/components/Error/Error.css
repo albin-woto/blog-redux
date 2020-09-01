@@ -5,8 +5,9 @@
   align-items: center;
   color: #00909e;
 }
-h1 {
+.error-message {
   text-align: center;
+  margin: 0;
 }
 strong {
   color: #27496d;
