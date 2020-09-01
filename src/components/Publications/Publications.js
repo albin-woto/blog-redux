@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import * as userActions from '../../actions/userActions';
 import * as publicationActions from '../../actions/publicationActions';
 
+import './Publications.css';
+
 import Loader from '../Loader/Loader';
 import Error from '../Error/Error';
 
@@ -46,11 +48,50 @@ class Publications extends Component {
     return <h1>Publications of {userReducer.users[key].name}</h1>;
   };
 
+  showPublications = () => {
+    const {
+      userReducer,
+      userReducer: { users },
+      publicationReducer,
+      publicationReducer: { publications },
+      match: {
+        params: { key },
+      },
+    } = this.props;
+
+    if (!users.length) return;
+    if (userReducer.error) return;
+
+    if (publicationReducer.loading) {
+      return <Loader />;
+    }
+    if (publicationReducer.error) {
+      return <Error message={publicationReducer.error} />;
+    }
+    if (!publications.length) return;
+    if (!('publications_index' in users[key])) return;
+
+    const { publications_index } = users[key];
+    return (
+      <section>
+        {publications[publications_index].map((publication) => (
+          <article className="publication">
+            <h3 className="publication-title">
+              {'Title: ' + publication.title}
+            </h3>
+            <p className="publication-body">{publication.body}</p>
+          </article>
+        ))}
+      </section>
+    );
+  };
+
   render() {
     console.log('props', this.props);
     return (
       <>
-        { this.showUser() }
+        {this.showUser()}
+        {this.showPublications()}
       </>
     );
   }
