@@ -45,7 +45,11 @@ class Publications extends Component {
       return <Loader />;
     }
 
-    return <h1>Publications of {userReducer.users[key].name}</h1>;
+    return (
+      <h1 className="author-title">
+        Publications of <strong>{userReducer.users[key].name}</strong>
+      </h1>
+    );
   };
 
   validatePublications = () => {
