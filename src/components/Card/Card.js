@@ -1,16 +1,18 @@
 import React from 'react';
-
 import './Card.css';
 
-const Card = () => {
+const Card = (props) => {
+  console.log('card props', props);
+  const {users} = props;
+  console.log(users);
   return (
-    <article className="card">
+    <article className="card" key={users.id}>
       <div className="card-info">
         <h4 className="card-title">Title</h4>
         <h6 className="card-author">
-          from <strong>Name</strong>
+          from <strong>{users.name}</strong>
           <br />
-          in <strong>website</strong>
+          in <strong>{users.website}</strong>
         </h6>
       </div>
       <p className="card-body">

@@ -14,13 +14,16 @@
   font-family: 'Merriweather', serif;
   margin: 0.5rem 0 0 0;
   font-size: 1.5rem;
-  color: rgb(0, 145, 158);
   text-align: center;
 }
 .card-author{
+  color: rgb(0, 145, 158);
   margin: 0.5rem 0;
   font-size: 1rem;
   text-align: center;
+}
+.card-author strong {
+  color: white;
 }
 .card-body {
   margin: 1rem 0;
@@ -30,9 +33,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.card-body strong {
-  color: rgb(0, 145, 158);
 }
 .card-body::first-letter {
   text-transform: capitalize;
