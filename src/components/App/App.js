@@ -3,12 +3,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Layout from '../Layout/Layout';
 import Users from '../../pages/Users/Users';
+import Home from '../../pages/Home/Home';
 import Publications from '../../components/Publications/Publications';
 
 const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
+        <Route exact path="/" component={Home} />
         <Route exact path="/users" component={Users} />
         <Route exact path="/publications/:key" component={Publications} />
       </Switch>

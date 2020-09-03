@@ -1,0 +1,27 @@
+.home-container {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.home-background {
+  max-width: 100%;
+  z-index: -1;
+}
+.title {
+  position: absolute;
+  top: 3rem;
+  font-family: 'Merriweather', serif;
+  width: 100%;
+  margin: 0;
+  height: 6.5rem;
+  background-color: rgba(48, 115, 186, 0.3);;
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  color: white;
+}
+strong {
+  color: #00909e;
+}
