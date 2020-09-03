@@ -26,7 +26,7 @@ class Trending extends Component {
     const topUsers = this.props.users.slice(0, 3);
     console.log('top', topUsers);
 
-    return topUsers.map((user) => <Card users={user} />);
+    return topUsers.map((user) => <Card users={user} key={user.id}/>);
   };
 
   render() {

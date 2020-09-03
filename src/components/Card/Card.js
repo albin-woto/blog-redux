@@ -6,7 +6,7 @@ const Card = (props) => {
   const {users} = props;
   console.log(users);
   return (
-    <article className="card" key={users.id}>
+    <article className="card">
       <div className="card-info">
         <h4 className="card-title">Title</h4>
         <h6 className="card-author">
