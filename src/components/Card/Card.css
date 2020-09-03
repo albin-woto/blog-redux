@@ -1,0 +1,38 @@
+.card {
+  width: 15rem;
+  height: 10rem;
+  background-color: rgb(39, 73, 109, 0.9);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  justify-content: flex-start;
+  overflow: hidden;
+  color: white;
+}
+.card-title {
+  font-family: 'Merriweather', serif;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+  color: rgb(0, 145, 158);
+  text-align: center;
+}
+.card-author{
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.card-body {
+  margin: 1rem 0;
+  width: 180px;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-body strong {
+  color: rgb(0, 145, 158);
+}
+.card-body::first-letter {
+  text-transform: capitalize;
+}
