@@ -85,7 +85,7 @@ class Publications extends Component {
 
   displayPublications = (publications, publications_index) => {
     return (
-      <section>
+      <>
         {publications.map((publication) => (
           <article className="publication" key={publication.id}>
             <h3 className="publication-title">
@@ -94,17 +94,17 @@ class Publications extends Component {
             <p className="publication-body">{publication.body}</p>
           </article>
         ))}
-      </section>
+      </>
     );
   };
 
   render() {
     console.log('props', this.props);
     return (
-      <>
+      <section>
         {this.showUser()}
         {this.validatePublications()}
-      </>
+      </section>
     );
   }
 }

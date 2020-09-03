@@ -1,12 +1,10 @@
 .author-title {
   font-family: 'Merriweather', serif;
+  font-size: 2rem;
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 0;
   color: #27496d;
-}
-section {
-  margin-top: 1.5rem;
 }
 .publication {
   margin: 2rem 2rem 0 calc(2rem + 8px);
