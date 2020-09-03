@@ -20,6 +20,7 @@
 .card-author{
   margin: 0.5rem 0;
   font-size: 1rem;
+  text-align: center;
 }
 .card-body {
   margin: 1rem 0;

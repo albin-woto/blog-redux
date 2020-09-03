@@ -7,7 +7,11 @@ const Card = () => {
     <article className="card">
       <div className="card-info">
         <h4 className="card-title">Title</h4>
-        <h6 className="card-author">from <strong>Name</strong></h6>
+        <h6 className="card-author">
+          from <strong>Name</strong>
+          <br />
+          in <strong>website</strong>
+        </h6>
       </div>
       <p className="card-body">
         loremipsumkaj ajsdnajsn alsjfnalsfnl lajknflansf asjdfa ajshfkajsh ajsfh
