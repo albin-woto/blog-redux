@@ -29,10 +29,12 @@ class Users extends Component {
 
   render() {
     return (
-      <>
-        <h1>Users</h1>
+      <main className="main-container">
+        <h1 className="title">
+          Users
+        </h1>
         {this.getContent()}
-      </>
+      </main>
     );
   }
 }
