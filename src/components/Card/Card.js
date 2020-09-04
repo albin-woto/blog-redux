@@ -2,9 +2,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = (props) => {
-  console.log('card props', props);
   const {users} = props;
-  console.log(users);
   return (
     <article className="card">
       <div className="card-info">
