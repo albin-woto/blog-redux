@@ -7,6 +7,7 @@ import './Publications.css';
 
 import Loader from '../Loader/Loader';
 import Error from '../Error/Error';
+import Gravatar from '../Gravatar/Gravatar';
 
 class Publications extends Component {
   // To assure that the users are available before the call of getPublicationsByUser
@@ -46,9 +47,18 @@ class Publications extends Component {
     }
 
     return (
-      <h1 className="author-title">
-        Publications of <strong>{userReducer.users[key].name}</strong>
-      </h1>
+      <div className="publication-header">
+        <h1 className="author-title">
+          Publications of <strong>{userReducer.users[key].name}</strong>
+        </h1>
+        <Gravatar
+          className="publication-avatar"
+          email={
+            this.props.userReducer.users[this.props.match.params.key].email
+          }
+          alt="Avatar"
+        />
+      </div>
     );
   };
 
