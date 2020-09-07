@@ -1,4 +1,5 @@
 .card {
+  margin: 0.5rem 0;
   width: 15rem;
   height: 10rem;
   background-color: rgb(39, 73, 109, 0.9);

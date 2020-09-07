@@ -1,15 +1,14 @@
 .trending-container {
-  position: absolute;
-  top: 10rem;
-  left: 7rem;
-  margin: 0;
+  /* position: relative;
+  top: 10rem; */
+  margin: 0.5rem;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 38rem;
-  width: 250px;
+  width: 15rem;
 }
 .trending-title {
   font-family: 'Merriweather', serif;
@@ -19,7 +18,16 @@
   align-items: center;
   color: white;
   height: 60px;
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0 2rem;
   border-radius: 15px;
+}
+
+@media (min-width: 767px) {
+  .trending-container {
+    position: absolute;
+    top: 10rem;
+    left: 7rem;
+    margin: 0;
+  }
 }
