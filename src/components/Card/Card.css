@@ -11,7 +11,7 @@
   color: white;
 }
 .card-info {
-  margin: 0;
+  margin: 0.25rem 0;
   padding: 0;
   display: flex;
   justify-content: center;
