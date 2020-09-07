@@ -10,11 +10,23 @@
   overflow: hidden;
   color: white;
 }
+.card-info {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-avatar {
+  margin: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+} 
 .card-title {
   font-family: 'Merriweather', serif;
-  margin: 0.5rem 0 0 0;
-  font-size: 1.5rem;
-  text-align: center;
+  margin: 0.5rem;
+  font-size: 1.7rem;
 }
 .card-author{
   color: rgb(0, 145, 158);
@@ -26,7 +38,7 @@
   color: white;
 }
 .card-body {
-  margin: 1rem 0;
+  margin: 0.8rem 0;
   width: 180px;
   font-size: 1rem;
   text-align: center;
