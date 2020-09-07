@@ -9,3 +9,10 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 }
+.link-footer {
+  color: white;
+  text-decoration: none;
+}
+.link-footer:hover {
+  color: rgb(0, 145, 158);
+}
