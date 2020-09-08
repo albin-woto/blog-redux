@@ -4,3 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.user {
+  position: absolute;
+  top: 3rem;
+}

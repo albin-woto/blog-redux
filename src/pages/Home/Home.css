@@ -6,10 +6,6 @@
   margin: 0;
   padding: 0;
 }
-/* .home-background {
-  max-height: 100%;
-  z-index: -1;
-} */
 .title {
   /* position: absolute;
   top: 3rem; */
@@ -29,8 +25,5 @@
 @media (min-width: 767px) {
   .home-container {
     display: block;
-  }
-  .home-background {
-    max-width: 100%;
   }
 }

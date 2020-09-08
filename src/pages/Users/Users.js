@@ -30,7 +30,7 @@ class Users extends Component {
   render() {
     return (
       <main className="main-container">
-        <h1 className="title">
+        <h1 className="user title">
           Users
         </h1>
         {this.getContent()}

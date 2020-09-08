@@ -10,7 +10,7 @@ const UserTable = (props) => {
     props.users.map((user, key) => (
       <tr key={user.id}>
         <td>{user.name}</td>
-        <td>{user.email}</td>
+        <td className="table-mobile">{user.email}</td>
         <td>{user.website}</td>
         <td>
           <Link to={`/publications/${key}`}>
@@ -26,7 +26,7 @@ const UserTable = (props) => {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
+            <th className="table-mobile">Email</th>
             <th>Link</th>
           </tr>
         </thead>
