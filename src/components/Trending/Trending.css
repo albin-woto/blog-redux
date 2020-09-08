@@ -22,12 +22,3 @@
   padding: 0 2rem;
   border-radius: 15px;
 }
-
-@media (min-width: 767px) {
-  .trending-container {
-    position: absolute;
-    top: 10rem;
-    left: 7rem;
-    margin: 0;
-  }
-}

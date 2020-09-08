@@ -3,11 +3,4 @@
   height: 100vh;
   display: grid;
   grid-template-rows: 3rem auto 3rem;
-  background: whitesmoke;
-}
-
-@media (min-width: 767px) {
-  .layout-container {
-    height: 100vh;
-  }
 }
