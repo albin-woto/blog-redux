@@ -11,10 +11,10 @@ const About = () => {
         <section className="project-info">
           <h4 className="about-intro">
             Hi, my name is <strong>Estanislao Albin Wotoszyn Grillo</strong> and
-            I'm a Frontend Developer
+            I'm a Frontend Developer.
           </h4>
           <p className="about-description">
-            The purpose of this page is just to practice writing code. In this
+            The purpose of this page is just to practice code writing. In this
             case I'm using:
           </p>
           <ul className="list-languages">
@@ -35,20 +35,22 @@ const About = () => {
         <section className="social">
           <a
             href="https://github.com/albin-woto"
+            title="Github profile"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img className="social-icon" src={githubLogo} alt="link-github" />
+            <img className="social-icon" src={githubLogo} alt="github-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/albin-wotoszyn"
+            title="LinkedIn profile"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               className="social-icon"
               src={linkedinLogo}
-              alt="link-linkedin"
+              alt="linkedin-icon"
             />
           </a>
         </section>
