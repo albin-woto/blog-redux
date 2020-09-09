@@ -13,7 +13,6 @@ class Publications extends Component {
   // To assure that the users are available before the call of getPublicationsByUser
   // I made the componentDidMount async and await for getAllUsers
   async componentDidMount() {
-    console.log('props mount', this.props);
     // Destructuring for better and cleaner code
     // The last one is the destructuring of this.props.match.params.key
     const {
@@ -109,7 +108,6 @@ class Publications extends Component {
   };
 
   render() {
-    console.log('props', this.props);
     return (
       <section>
         {this.showUser()}

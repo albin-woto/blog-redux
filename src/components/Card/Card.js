@@ -4,7 +4,6 @@ import './Card.css';
 import Gravatar from '../Gravatar/Gravatar';
 
 const Card = (props) => {
-  console.log(props);
   const { users } = props;
   return (
     <article className="card">
