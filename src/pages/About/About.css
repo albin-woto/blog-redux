@@ -12,6 +12,10 @@
   color: #27496d;
   text-decoration: none;
 }
+.about-container a:visited {
+  color: black;
+  text-decoration: none;
+}
 .about-container a:hover {
   color: #01909e;
   text-decoration: underline;
@@ -19,6 +23,9 @@
 .about-intro {
   font-size: 1.75rem;
   color: black;
+}
+.about-intro strong {
+  color: #01909e;
 }
 .social-icon {
   width: 2rem;

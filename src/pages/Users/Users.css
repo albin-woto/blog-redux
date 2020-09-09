@@ -8,4 +8,13 @@
 .user {
   position: absolute;
   top: 3rem;
+  font-family: 'Merriweather', serif;
+  width: 100%;
+  margin: 0;
+  height: 6.5rem;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #27496d;
 }

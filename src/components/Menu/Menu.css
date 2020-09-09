@@ -9,7 +9,9 @@
   color: white;
   text-decoration: none;
 }
-
 .menu-link:hover {
   color: #dae1e7;
+}
+.menu-link:active {
+  color: #01909e;
 }
