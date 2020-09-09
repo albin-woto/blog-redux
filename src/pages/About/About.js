@@ -31,6 +31,16 @@ const About = () => {
               </a>
             </li>
           </ul>
+          <p>
+            You can see the code{' '}
+            <a
+              href="https://github.com/albin-woto/blog-redux"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              here.
+            </a>
+          </p>
         </section>
         <section className="social">
           <a
