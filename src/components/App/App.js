@@ -9,8 +9,10 @@ const Users = lazy(() => import('../../pages/Users/Users'));
 const Publications = lazy(() => import('../Publications/Publications'));
 const About = lazy(() => import('../../pages/About/About'));
 
+const ghPath = "/blog-redux/"
+
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={ghPath}>
     <Suspense fallback={<Loader />}>
       <Layout>
         <Switch>
