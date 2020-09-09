@@ -10,7 +10,7 @@ const Card = (props) => {
     <article className="card">
       <div className="card-info">
         <Gravatar className="card-avatar" email={users.email} alt="Avatar" />
-        <h4 className="card-title">Title</h4>
+        <h5 className="card-title">Title</h5>
       </div>
       <h6 className="card-author">
         from <strong>{users.name}</strong>
