@@ -7,7 +7,7 @@ import Trending from '../../components/Trending/Trending';
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <main className="home-container">
       <h1 className="title">The blog</h1>
       <section className="home-content">
         <Trending />
@@ -17,7 +17,7 @@ const Home = () => {
           alt="Drawing of a girl reading"
         />
       </section>
-    </div>
+    </main>
   );
 };
 
