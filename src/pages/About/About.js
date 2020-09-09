@@ -21,7 +21,7 @@ const About = () => {
             <li>React</li>
             <li>Redux</li>
             <li>
-              Axios for the calls to{' '}
+              The data is fetched from{' '}
               <a
                 href="https://jsonplaceholder.typicode.com/"
                 rel="noopener noreferrer"
