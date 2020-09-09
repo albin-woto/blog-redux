@@ -16,6 +16,9 @@ A Predictable State Container for JS Apps.
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/)  
 Fake Online REST API for Testing and Prototyping
 
+[MD5](https://www.npmjs.com/package/md5)  
+A JavaScript function for hashing messages with MD5. In this case used for the avatars generated from [gravatar](https://gravatar.com).
+
 ***
 ### Available Scripts
 
