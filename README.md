@@ -2,6 +2,7 @@
 
 Simple landing for a blog  
 Disclaimer! This is a practice project only.
+### You can see it running live [here](https://albin-woto.github.io/blog-redux/about).
 
 ***
 ### Stack
